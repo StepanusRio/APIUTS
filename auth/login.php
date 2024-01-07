@@ -9,7 +9,7 @@ $datauser = array();
 $msg = "";
 $status = 0;
 
-$sql = "SELECT * FROM tbl_user WHERE email='" . $emailInput . "'AND password='" . $passwordInput . "'";
+$sql = "SELECT * FROM user WHERE email='" . $emailInput . "'AND password='" . $passwordInput . "'";
 
 $query = mysqli_query($conn, $sql);
 
