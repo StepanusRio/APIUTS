@@ -13,6 +13,7 @@ $PaymentMethod = $_POST['PaymentMethod'];
 $TanggalCheckout = $_POST['TanggalCheckout'];
 $StatusPayment = $_POST['StatusPayment'];
 $username = $_POST['username'];
+$imageProof = $_POST["imageProof"];
 $sql = "INSERT INTO tb_pro_checkout (
 idOrder,
 username,
@@ -23,7 +24,7 @@ Ongkir,
 TotalHarga,
 PaymentMethod,
 TanggalCheckout,
-StatusPayment) VALUES(
+StatusPayment,imageProof) VALUES(
 '$idOrder',
 '$username',
 '$Alamat',
@@ -34,7 +35,8 @@ $Ongkir,
 $TotalHarga,
 '$PaymentMethod'
 ,'$TanggalCheckout'
-,'$StatusPayment')";
+,'$StatusPayment',
+'$imageProof')";
 
 $hasil = mysqli_query($conn, $sql);
 
